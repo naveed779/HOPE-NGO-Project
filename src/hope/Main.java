@@ -39,8 +39,8 @@ public class Main extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
         jSeparator5 = new javax.swing.JSeparator();
-        jPasswordField2 = new javax.swing.JPasswordField();
-        jTextField3 = new javax.swing.JTextField();
+        lpass = new javax.swing.JPasswordField();
+        lemail = new javax.swing.JTextField();
         jToggleButton1 = new javax.swing.JToggleButton();
         jLabel4 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -98,39 +98,60 @@ public class Main extends javax.swing.JFrame {
         jSeparator5.setForeground(new java.awt.Color(255, 255, 255));
         jPanel2.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, 360, 30));
 
-        jPasswordField2.setBackground(new java.awt.Color(36, 47, 65));
-        jPasswordField2.setForeground(new java.awt.Color(255, 255, 255));
-        jPasswordField2.setText("jPasswordField1");
-        jPasswordField2.setBorder(null);
-        jPanel2.add(jPasswordField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, 360, -1));
+        lpass.setBackground(new java.awt.Color(36, 47, 65));
+        lpass.setForeground(new java.awt.Color(255, 255, 255));
+        lpass.setText("jPasswordField1");
+        lpass.setBorder(null);
+        jPanel2.add(lpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, 360, -1));
 
-        jTextField3.setBackground(new java.awt.Color(36, 47, 65));
-        jTextField3.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jTextField3.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField3.setText("Enter email here to login");
-        jTextField3.setBorder(null);
-        jPanel2.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 360, -1));
+        lemail.setBackground(new java.awt.Color(36, 47, 65));
+        lemail.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        lemail.setForeground(new java.awt.Color(255, 255, 255));
+        lemail.setText("Enter email here to login");
+        lemail.setBorder(null);
+        jPanel2.add(lemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 360, -1));
 
         jToggleButton1.setText("Sign in");
+        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton1ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Forget password?");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 360, -1, -1));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, -1, 50));
 
         jButton1.setText("Register Yourself");
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 520, -1, -1));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 590, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("not yet Register! Click Below on reister Button");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 490, -1, -1));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 560, -1, -1));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 0, 500, 630));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        new home().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+   new AfterSignUP().setVisible(true);
+     this.setVisible(false);
+  
+    }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -181,11 +202,11 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator5;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JTextField lemail;
+    private javax.swing.JPasswordField lpass;
     // End of variables declaration//GEN-END:variables
 }
